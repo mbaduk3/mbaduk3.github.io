@@ -1,0 +1,31 @@
+{
+  "name": "mbaduk3.github.io",
+  "version": "1.0.0",
+  "description": "Maxim Baduk - Personal Site",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbaduk3/mbaduk3.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbaduk3/mbaduk3.github.io/issues"
+  },
+  "homepage": "https://github.com/mbaduk3/mbaduk3.github.io#readme",
+  "dependencies": {
+    "sigma": "^2.0.0-alpha32"
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.2",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.1.4",
+    "ttf-loader": "^1.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

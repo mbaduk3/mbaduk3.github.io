@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Apple II";
-    src: url("/fonts/Apple_II.ttf") format("truetype")
-  }
+    src: url("./fonts/Apple_II.ttf") format("truetype")
+}
 
 * {
     box-sizing: content-box;
@@ -13,6 +13,7 @@ html {
     background-color: black;
     color: white;
     overflow: hidden;
+    cursor: crosshair;
 }
 
 body {
