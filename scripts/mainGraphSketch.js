@@ -2,28 +2,37 @@
     The home page graph sketch. Relies on p5.js.
 */
 
+var numVertices;
 var vertices = [];
 var edges = [];
 var cnv;
 
 function centerCanvas() {
-    var cnvx = (windowWidth - width) / 2;
-    var cnvy = (windowHeight - height) / 2;
+    var cnvx = max(25, (windowWidth - width - 80) / 2);
+    // var cnvy = (windowHeight - height) / 2;
+    var cnvy = (windowHeight - height - 80) / 2;
     cnv.position(cnvx, cnvy);
 }
 
 function setup() {
-    cnv = createCanvas(2*windowWidth / 3, 2*windowWidth / 3);
+    // cnv = createCanvas(4*windowWidth / 5, 5*windowHeight / 6);
+    cnv = createCanvas(4*windowWidth / 5, windowHeight + 160);
     centerCanvas();
 
+    numVertices = floor(width * height / 200);
     var maxEdgeLen = 2 * windowWidth / 3;
 
-    for (var i = 0; i < 22; i++) {
-        var initX = random(width);
-        var initY = random(height);
-        var baseX = randomGaussian(width / 2, width / 7);
-        var baseY = randomGaussian(height / 2, width / 7);
-        vertices.push(new Vertex(initX, initY, baseX, baseY, 7));
+    for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < 6; j++) {
+            // var initX = j * (width / 5);
+            // var initY = i * (height / 4);
+            // var baseX = randomGaussian(width / 2, width / 7);
+            // var baseY = randomGaussian(height / 2, width / 7);
+            var initX = width / 2; var initY = height / 2;
+            var baseX = random(width);
+            var baseY = random(height);
+            vertices.push(new Vertex(initX, initY, baseX, baseY, 7));
+        }
     }
 
     for (var i = 0; i < vertices.length; i++) {
@@ -40,6 +49,7 @@ function setup() {
         }
     }
 
+    noLoop();
 }
 
 function windowResized() {
@@ -71,6 +81,7 @@ class Vertex {
         this.baseX = x_;
         this.baseY = y_;
         this.travelling = true;
+        this.isLink = false;
     }
 
     update() {
@@ -90,10 +101,23 @@ class Vertex {
                 this.y = this.y + (diffY / 50);
             }
         }
+        else {
+            let mouseDist = dist(this.x, this.y, mouseX, mouseY);
+            if (mouseDist < 10) {
+                this.isLink = true;
+            } else { this.isLink = false; }
+        }
     }
 
     draw() {
+        fill(255);
+        strokeWeight(1);
         ellipse(this.x, this.y, this.r, this.r);
+        if (this.isLink) {
+            noFill();
+            strokeWeight(1);
+            ellipse(this.x, this.y, this.r + 10, this.r + 10);
+        }
     }
 
 }
@@ -111,7 +135,7 @@ class Edge {
     }
 
     draw() {
-        strokeWeight(min(4, max(100 / this.len, 0.2)));
+        strokeWeight(min(4, max(100 / this.len, 0.1)));
         line(vertices[this.fromI].x, vertices[this.fromI].y,
             vertices[this.toI].x, vertices[this.toI].y);
     }
