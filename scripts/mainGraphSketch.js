@@ -48,8 +48,6 @@ function setup() {
             }
         }
     }
-
-    noLoop();
 }
 
 function windowResized() {
@@ -58,7 +56,12 @@ function windowResized() {
 }
 
 function update() {
-    vertices.forEach(v => v.update());
+    var animDone = false;
+    vertices.forEach(v => {
+        v.update();
+        animDone = animDone || v.state == vertexState.IDLE;
+    });
+    if (animDone) { noLoop(); }
     edges.forEach(e => e.update());
 }
 
@@ -72,6 +75,15 @@ function draw() {
 }
 
 
+const vertexState = {
+    EXPAND: "expand",
+    IDLE: "idle", 
+    MOUSE: {
+        ATTRACTED: "attracted",
+        LOCKED: "locked"
+    }
+}
+
 class Vertex {
 
     constructor(x, y, x_, y_, r) {
@@ -80,32 +92,33 @@ class Vertex {
         this.r = r;
         this.baseX = x_;
         this.baseY = y_;
-        this.travelling = true;
+        this.state = vertexState.EXPAND;
         this.isLink = false;
     }
 
     update() {
-        if (this.travelling) {
-            let diffX = this.baseX - this.x;
-            let diffY = this.baseY - this.y;
-            if (abs(diffX) < 1) {
-                this.x = this.baseX;
-                this.travelling = false;
-            } else {
-                this.x = this.x + (diffX / 50);
-            }
-            if (abs(diffY) < 1) {
-                this.y = this.baseY;
-                this.travelling = false;
-            } else {
-                this.y = this.y + (diffY / 50);
-            }
-        }
-        else {
-            let mouseDist = dist(this.x, this.y, mouseX, mouseY);
-            if (mouseDist < 10) {
-                this.isLink = true;
-            } else { this.isLink = false; }
+        switch(this.state) {
+            case vertexState.EXPAND:
+                let diffX = this.baseX - this.x;
+                let diffY = this.baseY - this.y;
+                if (abs(diffX) < 1) {
+                    this.x = this.baseX;
+                } else {
+                    this.x = this.x + (diffX / 50);
+                }
+                if (abs(diffY) < 1) {
+                    this.y = this.baseY;
+                } else {
+                    this.y = this.y + (diffY / 50);
+                }
+                if (dist(this.x, this.x, this.baseX, this.baseY) < 1) {
+                    this.state = vertexState.IDLE;
+                }
+                break;
+            case vertexState.IDLE: 
+                break;
+            case vertexState.MOUSE:
+                break;
         }
     }
 
