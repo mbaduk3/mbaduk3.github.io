@@ -3,7 +3,10 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import PostLink from "../components/post-link"
-import HeroHeader from "../components/heroHeader"
+import SubLayout from "../components/sublayout"
+import { Link } from "gatsby"
+import biopic from '../../static/assets/bio-pic.jpeg'
+import resumepdf from '../../static/assets/mb_2020_current — копия.pdf'
 
 const IndexPage = ({
   data: {
@@ -16,6 +19,14 @@ const IndexPage = ({
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
+  const options = [
+    {name: "General", route: "/about/general"},
+    {name: "Resume", route: "about/resume"},
+    {name: "Contact", route: "about/contact"},
+  ]
+
+  console.log(biopic);
+
   return (
     <Layout>
       <Helmet>
@@ -23,11 +34,36 @@ const IndexPage = ({
         <meta name="description" content={site.siteMetadata.description} />
         {null}
       </Helmet>
-      <HeroHeader/>
+      <SubLayout 
+        pageRoute={"/about"}
+        pageTitle="Hello!"
+        options={options}>
+          <div className="bio">
+            <div className="bio-text left">
+              <p className="left">I'm a computer science student at Cornell University, 
+                and a motivated builder of various projects which 
+                you can check out <Link to={"/all_work"}>here.</Link><br/><br/>
+                My interests include game development, design, and anything having to do with AI.<br/><br/>
+              </p>
+              <p style={{"margin-bottom": 0}}>If you are interested in working with me, please reach out at mbaduk3@gmail.com.</p>
+            </div>
+            <img 
+              src={biopic} 
+              alt="This is me!" 
+              className="right"></img>
+          </div>
+          <div className="contact">
+            <p>Contact me at <a href="mb2474@cornell.edu">mb2474@cornell.edu</a></p>
+          </div>
+          <div className="resume">
+            <p>Download a pdf of my resume <a href={resumepdf}>here</a>.</p>
+          </div>
+      </SubLayout>
+      {/* <HeroHeader/>
       <h2>Blog Posts &darr;</h2>
       <div className="grids">
         {Posts}
-      </div>
+      </div> */}
     </Layout>
   )
 }

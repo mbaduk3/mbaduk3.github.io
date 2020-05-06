@@ -17,13 +17,15 @@ export default ({ children }) => {
   )
   return (
     <div className="site-wrapper">
-      <header className="site-header">
-        <div className="site-title">
-          <Link to="/">{data.site.siteMetadata.title}</Link>
-        </div>
-        <Navigation />
-      </header>
-      {children}
+      <div className="fullview">
+        <header className="site-header">
+          <div className="site-title">
+            <Link to="/">{data.site.siteMetadata.title}</Link>
+          </div>
+          <Navigation />
+        </header>
+        {children}
+      </div>
       <footer className="site-footer">
         <div className="footer-name">
           <p>Made by Maxim Baduk</p>
