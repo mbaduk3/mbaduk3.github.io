@@ -1,10 +1,11 @@
 import React from 'react'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
-export default () => (
+export default (props) => (
+
   <ThemeToggler>
-    {({ theme, toggleTheme }) => (
-      <label>
+    {({ theme, toggleTheme }) => 
+      <label className="theme-label">
         <input
           type="checkbox"
           className="theme-changer"
@@ -13,11 +14,7 @@ export default () => (
           checked={theme === 'dark'}
         />{' '}
         <div className="theme-toggle"></div>
-        {/* <div className="mode-container">
-          <i className="gg-sun"></i>
-          <i className="gg-moon"></i>
-        </div> */}
       </label>
-    )}
+    }
   </ThemeToggler>
 )

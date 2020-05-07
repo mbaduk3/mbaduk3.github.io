@@ -32,6 +32,8 @@ body.light {
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
   --theme-toggle-border-radius: 50%;
+  img {
+    box-shadow: 0px 0px 33px -7px rgba(58, 58, 58, 0.2)  }
 }
 body.dark {
   --primary-color: #ffffff;
@@ -63,6 +65,11 @@ body {
   color: var(--text-color);
   transition-property: background-color, color;
   transition-duration: var(--color-transition-time);
+  // animation: fadeIn ease 3s;
+  // @keyframes fadeIn {
+  //   0% { opacity: 0; }
+  //   100% { opacity: 1 }
+  // }
 }
 a {
   color: var(--primary-color);
@@ -103,6 +110,9 @@ a {
       margin-right: 0;
     }
   }
+}
+.nav-links {
+  visibility: hidden;
 }
 .site-header {
   display: flex;
@@ -277,9 +287,9 @@ a {
   line-height: 0.4rem;
   font-size: 0.8rem;
   margin-top: 130px;
-  a {
-    font-weight: 700;
-  }
+  // a {
+  //   font-weight: 700;
+  // }
   div {
     margin: 1rem 0;
   }
@@ -384,7 +394,7 @@ body.light {
 .sublayout {
   width: 100%;
   display: grid;
-  gap: 1rem;
+  gap: 1rem 3rem;
   // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-areas:
     "options-box"
@@ -397,6 +407,7 @@ body.light {
   .right {
     grid-area: right-content;
   }
+  * { animation: fadeIn linear var(--color-transition-time); }
 }
 
 @media (min-width: 500px) {
@@ -407,7 +418,7 @@ body.light {
       "left-content right-content"; 
   }
   .right {
-    padding-left: 2rem;
+    margin-left: 2rem;
   }
   .site-footer {
     flex-direction: row;
@@ -421,11 +432,42 @@ body.light {
   }
 }
 
+.theme-label {
+  display: none;
+  z-index: 103;
+}
+.hamburger-label {
+  display: inherit;
+  width: 23px;
+  height: 19px;
+  z-index: 101;
+}
+// .hamburger-icon {
+//   background-color: var(--secondary-color);
+//   transition: background-color var(--color-transition-time);
+//   &:hover  {
+//     transition: background-color var(--color-transition-time);
+//     background-color: var(--primary-color);
+//   }
+// }
+
+@media (min-width: 650px) {
+  .nav-links {
+    visibility: visible;
+  }
+  .theme-label {
+    display: inherit;
+  }
+  .hamburger-label { 
+    display: none;
+  }
+}
+
 .options-box {
   display: flex;
   flex-direction: column;
   grid-area: options-box;
-  margin: 30px 0;
+  margin: 0px 0;
   h1 {
     font-weight: 500;
     font-size: 3.5rem;
@@ -477,3 +519,32 @@ body.light {
   justify-content: space-between;
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1 }
+}
+@keyframes fadeOut  {
+  0% { opacity: 1; }
+  100% { opacity: 0 }
+}
+
+.full-menu-div {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  background-color: var(--primary-color);
+  transition: opacity var(--color-transition-time) 1s;
+
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  padding: 1rem 0 0 2rem;
+  a { 
+    color: var(--background);
+    margin: 1rem 0;
+  }
+}

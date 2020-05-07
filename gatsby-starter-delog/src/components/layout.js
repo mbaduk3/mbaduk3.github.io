@@ -28,8 +28,8 @@ export default ({ children }) => {
       </div>
       <footer className="site-footer">
         <div className="footer-name">
-          <p>Made by Maxim Baduk</p>
-          <p>2022</p>
+          <p>Made by Maxim Baduk, 2020</p>
+          <p>Reach out at: <a href="mailto:mb2474@cornell.edu">mb2474@cornell.edu</a></p>
         </div>
         <div className="footer-social">
           <p><a href="https://github.com/mbaduk3">GitHub</a></p>
