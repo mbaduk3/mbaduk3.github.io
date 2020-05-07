@@ -4,7 +4,7 @@ export default (props) => {
 
     const [activeOptIndex, setOptIndex] = useState(0);
 
-    var opts = props.opts == null ? null : props.options.map((opt, i) => {
+    var opts = props.options == null ? null : props.options.map((opt, i) => {
         let clsName = activeOptIndex === i ? "sublayout-option-active" : "sublayout-option";
         let item = <li 
             key={opt.name + "_" +  i} 
