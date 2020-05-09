@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
-import FullMenu from './fullMenu'
+import React from 'react'
 
-export default () => {
-
+export default (props) => {
  
     const hamburgerIconStyle = {
         "position": "relative",
@@ -11,26 +9,19 @@ export default () => {
         "fontSize": "2.5rem",
         "top": "-16px",
         "zIndex": "102",
-    }
+    };
 
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    var bodyOverflow = menuOpen ? "auto" : "hidden";
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-        console.log(menuOpen);
-        document.body.style.overflow = bodyOverflow;
-    }
-
-    var iconColor = menuOpen ? "var(--background)" : "var(--primary-color)";
+    var iconColor = props.menu.open ? "var(--background)" : "var(--primary-color)";
 
     const icon = 
         <div 
             className="hamburger-icon" 
             style={{...hamburgerIconStyle, "color": iconColor}}
-            onClick={_ => toggleMenu()}>
-                { menuOpen  ? "x"  : "=" }
+            onClick={() => {
+                props.menu.set(!props.menu.open);
+                Object.assign(document.getElementsByTagName("BODY")[0].style, {"overflow": (props.menu.open ? "scroll" : "hidden")});
+                }}>
+                { props.menu.open ? "x"  : "=" }
         </div>
     
     const menuOffStyle = {
@@ -45,8 +36,7 @@ export default () => {
 
     return (
         <label className="hamburger-label">
-            {console.log(menuOpen)}
-            <FullMenu style={menuOpen ? menuOnStyle : menuOffStyle}/>
+            {console.log(props.menu.open)}
             {icon}
         </label>
     );
