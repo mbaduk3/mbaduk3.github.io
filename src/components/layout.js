@@ -41,7 +41,7 @@ export default ({ children }) => {
 
   const defLayout = (
     <>
-    {menuOpen ? <FullMenu /> : null}
+    <FullMenu menu={{open: menuOpen, set: setMenuOpen}}/>
     <div className="site-wrapper">
       <div className="fullview">
         <header className="site-header">

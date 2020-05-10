@@ -6,7 +6,7 @@ export default (props) => {
 
   const defNav = (
     <nav className="navigation"> 
-      <ThemeChanger />
+      <ThemeChanger menu={props.menu}/>
       <Hamburger menu={props.menu}/>
     </nav>
   );
