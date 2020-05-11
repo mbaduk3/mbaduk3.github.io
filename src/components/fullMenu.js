@@ -7,7 +7,11 @@ export default (props) => {
     useEffect(() =>  {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    });
+    }, []);
+    useEffect(() =>  {
+        window.addEventListener("load", handleResize);
+        return () => window.removeEventListener("load", handleResize);
+    }, []);
 
     function handleResize() { updateRMargin(loadRMargin()); }
     function loadRMargin() {return getComputedStyle(document.getElementsByClassName("site-wrapper")[0])["margin-right"];}
