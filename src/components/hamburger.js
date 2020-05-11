@@ -36,7 +36,7 @@ export default (props) => {
 
     return (
         <label className="hamburger-label">
-            {console.log(props.menu.open)}
+            {/* {console.log(props.menu.open)} */}
             {icon}
         </label>
     );
