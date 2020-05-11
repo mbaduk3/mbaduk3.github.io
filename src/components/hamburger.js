@@ -23,16 +23,6 @@ export default (props) => {
                 }}>
                 { props.menu.open ? "x"  : "=" }
         </div>
-    
-    const menuOffStyle = {
-        "display": "none",
-        "opacity": "0",
-    }
-
-    const menuOnStyle = {
-        "display": "inherit",
-        "opacity": "1",
-    }
 
     return (
         <label className="hamburger-label">

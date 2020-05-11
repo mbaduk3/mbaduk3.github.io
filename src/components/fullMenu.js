@@ -2,15 +2,17 @@ import React, { useEffect, useState } from 'react'
 
 export default (props) => {
 
-    const [rMargin, updateRMargin] = useState(0);
+    const [rMargin, updateRMargin] = useState(18);
 
     useEffect(() =>  {
         window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-    useEffect(() =>  {
         window.addEventListener("load", handleResize);
-        return () => window.removeEventListener("load", handleResize);
+        window.addEventListener("hashchange", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            window.removeEventListener("load", handleResize);
+            window.removeEventListener("hashchange", handleResize);
+        }
     }, []);
 
     function handleResize() { updateRMargin(loadRMargin()); }

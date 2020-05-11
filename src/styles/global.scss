@@ -377,20 +377,6 @@ body.light {
   height: 24px;
   cursor: pointer;
 }
-.theme-toggle {
-    box-sizing: border-box;
-    width: 21px;
-    height: 21px;
-    cursor: pointer;
-    background: none;
-    border: 4px solid var(--secondary-color);
-    border-radius: var(--theme-toggle-border-radius);
-    transition: border-radius 0.5s, border-color var(--color-transition-time);
-    &:hover {
-      transition: border-color var(--color-transition-time), border-radius 0.5s;
-      border-color: var(--primary-color);
-    }
-}
 
 .sublayout {
   width: 100%;
@@ -431,7 +417,7 @@ body.light {
 }
 
 .theme-label {
-  display: none;
+  // display: none;
   z-index: 103;
   margin-right: 1rem;
 }
