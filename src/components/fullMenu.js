@@ -20,16 +20,21 @@ export default (props) => {
     var dispStyle = props.menu.open ? {"opacity": "1", "zIndex": "100"} : {"opacity": "0", "zIndex": "-1"};
     var style = {...marginStyle, ...dispStyle};
 
+    function handleLinkClick() { 
+        props.menu.set(false); 
+        Object.assign(document.getElementsByTagName("BODY")[0].style, {"overflow": "scroll"});
+    }
+
     return (
         <div className={"full-menu-div"} style={style}>
             <div className={"full-menu-opt"}>
-                <a href="/">Home</a>
+                <a href="#" onClick={handleLinkClick}>Home</a>
                 </div>
             <div className={"full-menu-opt"}>
-                <a href="/portfolio">Portfolio</a>
+                <a href="#portfolio" onClick={handleLinkClick}>Portfolio</a>
             </div>
             <div className={"full-menu-opt"}>
-                <a href="/all_work">All Work</a>
+                <a href="#allwork" onClick={handleLinkClick}>All Work</a>
             </div>
         </div>
     );
