@@ -6,7 +6,7 @@ import PostLink from "../components/post-link"
 import SubLayout from "../components/sublayout"
 import { Link } from "gatsby"
 import biopic from '../../static/assets/bio-pic.jpeg'
-import resumepdf from '../../static/assets/mb_2020_current — копия.pdf'
+import Resume from '../components/resume'
 
 const IndexPage = ({
   data: {
@@ -51,7 +51,7 @@ const IndexPage = ({
               className="right"></img>
           </div>
           <div className="resume">
-            <p>Download a pdf of my resume <a href={resumepdf}>here</a>.</p>
+            <Resume />
           </div>
           <div className="contact">
             <p>Contact me at <a href="mailto:mb2474@cornell.edu">mb2474@cornell.edu</a></p>

@@ -510,8 +510,7 @@ body.light {
   left: 0;
   opacity: 1;
   overflow: hidden;
-  // z-index: 100;
-  // padding: 0 5%;
+  // padding: 0 max(62px, (100vw - 1150px)/2);
   background-color: var(--primary-color);
   transition: opacity 0.2s, background-color var(--color-transition-time);
   display: flex;
