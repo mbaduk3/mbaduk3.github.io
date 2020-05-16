@@ -5,7 +5,3 @@ This site is buit with Gatsby, GraphQL, and React.
 
 ## Build
 To build this site locally use `gatsby build`.
-
-## Credits
-- Design inpiration from http://poststudio.dk/
-- Based on the W3Layout Delog started

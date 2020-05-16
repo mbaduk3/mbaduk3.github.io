@@ -14,20 +14,99 @@
                        "Ran automated security tests and fixed key security flaws (XSS, URL-access) in API-service code, protecting the data of clients such as HP, PWC and other Fortune 500 companies.",
                        "Leveraged scrum methodology on Service Oriented Architecture (SOA) projects as part of the Service Delivery Platform team. Participated in and internalized all phases of the software development life-cycle."
                    ]
+               },
+               {
+                   "title": "SchoolNova at Stony Brook University",
+                   "subtitle": "Teaching Assistant", 
+                   "location": "Stony Brook, NY", 
+                   "timeline": "September 2016 - June 2018", 
+                   "bullets": [
+                       "Assisted in teaching introductory programming to a class of 15 high school students at the SchoolNova enrichment program.",
+                       "Personally tutored students, wrote and administered exams and class materials.",
+                       "Taught introductory programming concepts such as computational thinking, loops, syntax, OOP, algorithms, data structures, space complexity."
+                   ]
+               },
+               {
+                   "title": "Visual Analytics Lab at Stony Brook University", 
+                   "subtitle": "Research Assistant", 
+                   "location": "Stony Brook, NY",
+                   "timeline": "July 2017 - December 2017",
+                   "bullets": [
+                       "Initiated a research project analyzing consumers’ attitudes toward nutrition based on changes to the standard FDA nutrition label. Project was published under Professor Klaus Mueller of Stony Brook University and recommended modifications to the standard nutrition label in order to enhance consumer understanding.",
+                       "Collaborated with a team of graduate students to design and implement the scientific study; findings were published and submitted to Regeneron STS. Developed a dynamically-generated labeling tool using Python and Matplotlib.",
+                       "Presented findings to laboratory personnel and non-professional audiences."
+                   ]
                }
            ]
        },
        {
-           "title": "Projects"
+           "title": "Projects",
+           "content": [
+               {
+                   "title": "BattleCaml",
+                   "timeline": "December 2019",
+                   "bullets": [
+                       "Developed a fully operational Battleship game entirely using functional OCaml as part of the Cornell curriculum.",
+                       "Led a team of three peers over a two-month development window, and won “top project” among a class of 35. "
+                   ]
+               },
+               {
+                   "title": "BigRedHacks 2018", 
+                   "timeline": "October 2018", 
+                   "bullets": [
+                       "Competed at Cornell's largest annual collegiate hackathon. Worked with a team of three people over a 36 hour window to create a web- app--'MoodTunes'--that would auto-generate Spotify playlists based on a user's detected facial expressions.",
+                       "Used Python and Flask library to create a backend RESTful API service, dynamic HTML templates and CSS for web interface, Spotify API for playlist generation and Microsoft Azure computer vision API for facial expression detection."
+                   ]
+               },
+               {
+                   "title": "Cornell Intro to App-Dev Hackathon", 
+                   "timeline": "December 2018", 
+                   "bullets": [
+                       "Worked with a team of three others to develop iOS app--'Social Stocks'--a social network for stock trading discussion.",
+                       "Used Python and Flask library for a RESTful backend API, Alphavantage API for stock data, and deployed on Google Cloud Platform."
+                   ]
+               }
+           ]
        },
        {
-           "title": "Education"
+           "title": "Education", 
+           "content": [
+               {
+                   "title": "Cornell University", 
+                   "subtitle": "B.A. Computer Science",
+                   "timeline": "August 2018 - December 2021",
+                   "bullets": [
+                       "Relevant coursework: Introduction to Analysis of Algorithms, Computer System Organization and Programming, Foundations of Artificial Intelligence, Introduction to Backend App Development, Discrete Structures, Functional Programming, Object Oriented Programming and Data Structures, Networks, Multivariable Calculus, Linear Algebra, Intermediate Data Science."
+                   ]
+               }
+           ]
        },
        {
-           "title": "Honors"
+           "title": "Honors",
+           "content": [
+                {
+                    "title": "St. Joseph's College Annual High School Programming Competition",
+                    "subtitle": "2nd Place",
+                    "timeline": "May 2018"
+                },
+                {
+                    "title": "Cornell College of Arts & Sciences Dean’s List Scholar",
+                    "timeline": "Fall 2018 - Spring 2018"
+                }
+           ]
        },
        {
-           "title": "Skills"
+           "title": "Skills",
+           "content": [
+               {
+                   "title": "Programming Languages",
+                   "bullets": "Java (Spring), Javascript (React, D3.js), Python (matplotlib, scipy, Flask), OCaml, CSS/HTML, Linux/Unix, SQL"
+               },
+               {
+                   "title": "Languages",
+                   "bullests": "English (fluent), Russian (fluent), Spanish (familiar)"
+               }
+           ]
        }
     ]
 }
