@@ -37,18 +37,19 @@ const IndexPage = ({
         pageTitle="Hello!"
         options={options}>
           <div className="bio">
-            <div className="bio-text">
-              <p className="left">I'm a computer science student at Cornell University, 
+            <div className="bio-text left">
+              <p>I'm a computer science student at Cornell University, 
                 and a motivated builder of various projects which 
                 you can check out <Link to={"/all_work"}>here.</Link><br/><br/>
                 My interests include game development, design, and anything having to do with AI.<br/><br/>
               </p>
               <p style={{"marginBottom": 0}}>If you are interested in working with me, please <a href="mailto:mb2474@cornell.edu">reach out</a>.</p>
             </div>
-            <img 
-              src={biopic} 
-              alt="This is me!" 
-              className="right"></img>
+            <div className="right">
+              <img 
+                src={biopic} 
+                alt="This is me!"></img>
+            </div>
           </div>
           <div className="resume">
             <Resume />

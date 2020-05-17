@@ -379,30 +379,45 @@ body.light {
 }
 
 .sublayout {
-  width: 100%;
-  display: grid;
-  gap: 1rem 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // display: grid;
+  // gap: 1rem 3rem;
   // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-areas:
-    "options-box"
-    "left-content"
-    "right-content";
+  // grid-template-areas:
+  //   "options-box"
+  //   "left-content"
+  //   "right-content";
   font-size: 1.6rem;
-  .left {
-    grid-area: left-content;
-  }
-  .right {
-    grid-area: right-content;
-  }
   // * { animation: fadeIn linear var(--color-transition-time); }
+}
+
+.left {
+  width: 100%;
+  padding-right: 2rem;
+}
+.right {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .left {
+    width: 67%;
+  }
+  .right { 
+    width: 32%;
+  }
 }
 
 @media (min-width: 500px) {
   .sublayout {
-    grid-template-columns: 57% 1fr;
-    grid-template-areas: 
-      "options-box options-box"
-      "left-content right-content"; 
+    // grid-template-columns: 57% 1fr;
+    // grid-template-areas: 
+    //   "options-box options-box"
+    //   "left-content right-content"; 
   }
   .site-footer {
     flex-direction: row;
@@ -534,4 +549,84 @@ body.light {
 
 .full-menu-opt {
   margin: 1rem 0;
+}
+
+.bio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  div {
+    margin: 2rem 0;
+  }
+}
+
+.resume {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.resume-section {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  .resume-section-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    width: 100%;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    // font-weight: 500;
+  }
+}
+
+.resume-entry {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0;
+  .resume-entry-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    grid-area: right;
+  }
+  .resume-entry-sub {
+    display: flex;
+    justify-content: space-between;
+  }
+  .resume-entry-meta {
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 3rem;
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+  h3 {
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+    margin: 0;
+    font-weight: 400;
+   }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
 }

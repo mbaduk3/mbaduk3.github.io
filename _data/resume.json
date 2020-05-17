@@ -87,11 +87,13 @@
                 {
                     "title": "St. Joseph's College Annual High School Programming Competition",
                     "subtitle": "2nd Place",
-                    "timeline": "May 2018"
+                    "timeline": "May 2018", 
+                    "bullets": []
                 },
                 {
                     "title": "Cornell College of Arts & Sciences Dean’s List Scholar",
-                    "timeline": "Fall 2018 - Spring 2018"
+                    "timeline": "Fall 2018 - Spring 2018",
+                    "bullets": []
                 }
            ]
        },
@@ -100,11 +102,15 @@
            "content": [
                {
                    "title": "Programming Languages",
-                   "bullets": "Java (Spring), Javascript (React, D3.js), Python (matplotlib, scipy, Flask), OCaml, CSS/HTML, Linux/Unix, SQL"
+                   "bullets": [
+                       "Java (Spring), Javascript (React, D3.js), Python (matplotlib, scipy, Flask), OCaml, CSS/HTML, Linux/Unix, SQL"
+                   ]
                },
                {
                    "title": "Languages",
-                   "bullests": "English (fluent), Russian (fluent), Spanish (familiar)"
+                   "bullets": [
+                       "English (fluent), Russian (fluent), Spanish (familiar)"
+                   ]
                }
            ]
        }

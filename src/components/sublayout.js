@@ -17,11 +17,11 @@ export default (props) => {
 
     return (
         <div className="sublayout">
-            <div className="options-box">
+            <div className="options-box left">
                 <h1>{props.pageTitle}</h1>
                 <ul className="sublayout-opts-list">{opts}</ul>
             </div>
-            {props.children[activeOptIndex].props.children}
+            {props.children[activeOptIndex]}
         </div>
     );
 }
