@@ -7,9 +7,8 @@ const ResumeEntry = (props) => {
     <div className="resume-entry">
       {console.log(props)}
       <div className="resume-entry-meta">
-          <h1>{props.title}</h1><h3>{props.timeline}</h3>
-          <h3>{props.subtitle}</h3>
-          <h3>{props.location}</h3>
+          <div className="resume-entry-meta-main"><h1>{props.title}</h1><h3>{props.subtitle}</h3></div>
+          <div className="resume-entry-meta-sub"><h3>{props.location ? props.location + "      " : ""}</h3><h3>{props.timeline}</h3></div>
       </div>
       <ul>
         {props.bullets.map((b, i) => <li key={i}>{b}</li>)}

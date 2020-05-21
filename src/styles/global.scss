@@ -443,14 +443,7 @@ body.light {
   z-index: 105;
 }
 
-@media (min-width: 650px) {
-  .nav-links {
-    visibility: visible;
-  }
-  .theme-label {
-    display: inherit;
-  }
-}
+
 
 .options-box {
   display: flex;
@@ -570,7 +563,7 @@ body.light {
 .resume-section {
   font-size: 1.5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
   .resume-section-title {
@@ -586,8 +579,9 @@ body.light {
 
 .resume-entry {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 2rem 0;
+  width: 100%;
   .resume-entry-head {
     display: flex;
     align-items: baseline;
@@ -609,10 +603,15 @@ body.light {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 3rem;
+    justify-content: space-between;
+    * {
+      * {
+        margin-bottom: 1rem;
+      }
+    }
     h1 {
       font-size: 2rem;
       font-weight: 500;
-      margin: 0;
     }
   }
   h3 {
@@ -624,9 +623,51 @@ body.light {
   ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   li {
     font-size: 1rem;
     margin: 1rem 0;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  li:first-child {
+    margin-top: 0;
+  }
+  .resume-entry-meta-sub {
+    display: flex;
+    white-space: pre;
+    // justify-content: space-evenly;
+    // * {
+    //   margin-right: 1rem;
+    // }
+  }
+}
+
+@media (min-width: 650px) {
+  .nav-links {
+    visibility: visible;
+  }
+  .theme-label {
+    display: inherit;
+  }
+  .resume-section {
+    flex-direction: row;
+  }
+  .resume-entry {
+    flex-direction: row;
+  }
+  .resume-entry-meta {
+    * {
+      * {
+        margin-bottom: 0;
+      }
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 0;
+    }
   }
 }
