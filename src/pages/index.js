@@ -7,6 +7,7 @@ import SubLayout from "../components/sublayout"
 import { Link } from "gatsby"
 import biopic from '../../static/assets/bio-pic.jpeg'
 import Resume from '../components/resume'
+import ReachMe from '../components/reachme'
 
 const IndexPage = ({
   data: {
@@ -55,7 +56,7 @@ const IndexPage = ({
             <Resume />
           </div>
           <div className="contact">
-            <p>Contact me at <a href="mailto:mb2474@cornell.edu">mb2474@cornell.edu</a></p>
+            <ReachMe />
           </div>
       </SubLayout>
     </Layout>
