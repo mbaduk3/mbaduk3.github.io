@@ -34,7 +34,7 @@ export default (props) => {
                 <a href="#" onClick={handleLinkClick}>Home</a>
                 </div>
             <div className={"full-menu-opt"}>
-                <a href="#portfolio" onClick={handleLinkClick}>Portfolio</a>
+                <a href="/portfolio" onClick={handleLinkClick}>Portfolio</a>
             </div>
             <div className={"full-menu-opt"}>
                 <a href="#allwork" onClick={handleLinkClick}>All Work</a>

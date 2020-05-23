@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default (props) => {
+const Sublayout = (props) => {
 
     const [activeOptIndex, setOptIndex] = useState(0);
 
@@ -25,3 +25,5 @@ export default (props) => {
         </div>
     );
 }
+
+export default Sublayout

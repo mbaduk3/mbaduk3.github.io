@@ -704,3 +704,27 @@ body.light {
     height: 35px;
   }
 }
+
+.portfolio-entry {
+  width: 100%;
+  border-bottom: 1px solid var(--primary-color);
+  margin-top: 1.5rem;
+  a {
+    text-decoration: none;
+  }
+}
+
+.portfolio-entry-title {
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.portfolio-entry-sub {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.portfolio-entry-more {
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+}
