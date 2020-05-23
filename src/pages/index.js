@@ -55,7 +55,7 @@ const IndexPage = ({
           <div className="resume">
             <Resume />
           </div>
-          <div className="contact">
+          <div className="contact" style={{'width': '100%'}}>
             <ReachMe />
           </div>
       </SubLayout>

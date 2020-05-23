@@ -672,3 +672,35 @@ body.light {
     }
   }
 }
+
+.reachme {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.reachme-entry {
+  display: flex;
+  width: 100%;
+  margin-bottom: 3rem;
+  p {
+    margin: 0;
+    padding: 0;
+    padding-right: 1rem;
+  }
+  div {
+    flex-grow: 100;
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: 0.3rem;
+  }
+  span {
+    width: 35px;
+    height: 35px;
+    margin-left: 1rem;
+  }
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+}
