@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from "gatsby"
 
 export default (props) => {
 
@@ -31,13 +32,13 @@ export default (props) => {
     return (
         <div className={"full-menu-div"} style={style}>
             <div className={"full-menu-opt"}>
-                <a href="#" onClick={handleLinkClick}>Home</a>
+                <Link to="/" onClick={handleLinkClick}>Home</Link>
                 </div>
             <div className={"full-menu-opt"}>
-                <a href="/portfolio" onClick={handleLinkClick}>Portfolio</a>
+                <Link to="/portfolio" onClick={handleLinkClick}>Portfolio</Link>
             </div>
             <div className={"full-menu-opt"}>
-                <a href="#allwork" onClick={handleLinkClick}>All Work</a>
+                <Link to="/all_work" onClick={handleLinkClick}>All Work</Link>
             </div>
         </div>
     );

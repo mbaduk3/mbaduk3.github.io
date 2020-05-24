@@ -8,6 +8,7 @@ exports.components = {
   "component---src-pages-contact-js": () => import("./../src/pages/contact.js" /* webpackChunkName: "component---src-pages-contact-js" */),
   "component---src-pages-index-js": () => import("./../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
   "component---src-pages-portfolio-js": () => import("./../src/pages/portfolio.js" /* webpackChunkName: "component---src-pages-portfolio-js" */),
-  "component---src-templates-blog-template-js": () => import("./../src/templates/blogTemplate.js" /* webpackChunkName: "component---src-templates-blog-template-js" */)
+  "component---src-templates-blog-template-js": () => import("./../src/templates/blogTemplate.js" /* webpackChunkName: "component---src-templates-blog-template-js" */),
+  "component---src-templates-project-js": () => import("./../src/templates/project.js" /* webpackChunkName: "component---src-templates-project-js" */)
 }
 

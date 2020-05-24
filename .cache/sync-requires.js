@@ -11,6 +11,7 @@ exports.components = {
   "component---src-pages-contact-js": hot(preferDefault(require("/Users/maximbaduk/Documents/Computer Science/mbaduk3.github.io/src/pages/contact.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/maximbaduk/Documents/Computer Science/mbaduk3.github.io/src/pages/index.js"))),
   "component---src-pages-portfolio-js": hot(preferDefault(require("/Users/maximbaduk/Documents/Computer Science/mbaduk3.github.io/src/pages/portfolio.js"))),
-  "component---src-templates-blog-template-js": hot(preferDefault(require("/Users/maximbaduk/Documents/Computer Science/mbaduk3.github.io/src/templates/blogTemplate.js")))
+  "component---src-templates-blog-template-js": hot(preferDefault(require("/Users/maximbaduk/Documents/Computer Science/mbaduk3.github.io/src/templates/blogTemplate.js"))),
+  "component---src-templates-project-js": hot(preferDefault(require("/Users/maximbaduk/Documents/Computer Science/mbaduk3.github.io/src/templates/project.js")))
 }
 

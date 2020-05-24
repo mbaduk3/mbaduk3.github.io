@@ -41,7 +41,7 @@ const IndexPage = ({
             <div className="bio-text left">
               <p>I'm a computer science student at Cornell University, 
                 and a motivated builder of various projects which 
-                you can check out <Link to={"/all_work"}>here.</Link><br/><br/>
+                you can check out <Link to={"/portfolio"}>here.</Link><br/><br/>
                 My interests include game development, design, and anything having to do with AI.<br/><br/>
               </p>
               <p style={{"marginBottom": 0}}>If you are interested in working with me, please <a href="mailto:mb2474@cornell.edu">reach out</a>.</p>
