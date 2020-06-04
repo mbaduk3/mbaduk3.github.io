@@ -63,7 +63,7 @@ body {
   font-family: $font-family;
   background-color: var(--background);
   color: var(--text-color);
-  transition-property: background-color, color;
+  transition-property: background-color, color, border-bottom;
   transition-duration: var(--color-transition-time);
   // animation: fadeIn ease 3s;
   // @keyframes fadeIn {
@@ -78,6 +78,9 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+div {
+  transition: border-bottom var(--color-transition-time);
 }
 .site-wrapper {
   padding: 40px 0;
@@ -727,4 +730,40 @@ body.light {
 .portfolio-entry-more {
   color: var(--secondary-color);
   font-size: 0.8rem;
+}
+
+.project-meta {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid var(--primary-color);
+}
+.project-section {
+  margin: 3rem 0;
+}
+
+.project-section-head {
+  width: 100%;
+  border-bottom: 1px solid var(--primary-color);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  h2 {
+    margin: 0;
+  }
+}
+
+.project-tech-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin-right: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--background);
+    padding: 0.3rem 0.5rem;
+    border-radius: 500px;
+    transition: color var(--color-transition-time);
+  }
 }
