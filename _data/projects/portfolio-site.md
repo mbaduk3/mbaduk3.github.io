@@ -1,12 +1,16 @@
 ---
 template: Project
 slug: /portfolio-site
-timeline: April - June 2020
+timeline: April 2020 - June 2020
 title: Portfolio Site
 desc: My personal site, developed to display a portfolio showcasing my projects. 
 technologies: ["css", "html", "javascript", "gatsby", "react", "graphQL"]
 ---
 
-# This is a test project!
+# Portfolio Site
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique fugiat delectus pariatur blanditiis nulla soluta ratione nostrum, harum maiores adipisci a quod nobis cupiditate quae odit unde qui sit consequuntur.
+This project was aimed at creating an online portfolio where I could showcase my software projects. 
+
+This site is completely static, generated with Gatsby and developed with React. 
+
+Content is loaded during the build process with graphQl. 
